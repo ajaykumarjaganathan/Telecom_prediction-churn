@@ -34,4 +34,4 @@ The app uses a machine learning model that has been trained on historical custom
 """)
 
 st.write("---")
-st.write("Made by Kevin Rio Harristyando")
+st.write("Made by Ajaykumar")
