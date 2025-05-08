@@ -1,4 +1,7 @@
-# **Telcom Customer Churn Analysis**
+  
+  **'Live virtual app link here'** https://myenrjzidnpswm3zpvnre7.streamlit.app/
+
+# **Telecom Customer Churn Analysis**
 
 This repository showcases my skills as a **Data Scientist**, combining **machine learning**, **data visualization**, and **application development** to address a critical business problem: **Customer Churn Prediction** in the telecommunications industry. The project demonstrates my ability to extract actionable insights, build predictive models, and develop interactive solutions for real-world challenges.
 
@@ -31,6 +34,7 @@ This repository demonstrates the complete Data Science workflow, including **dat
 
 - **`Homepage.py`**:  
   The **Streamlit-based homepage**, introducing the project and serving as a navigation hub for the application.
+
 
 - **`README.md`**:  
   This document, providing a detailed overview of the project and its structure.
