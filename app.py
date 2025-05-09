@@ -1,5 +1,6 @@
 import streamlit as st
-from pages.Model\_Performance\_Evaluation import show\_evaluation
+from pages.Model_Performance_Evaluation import show_evaluation
+
 
 # After model training and predictions
 
