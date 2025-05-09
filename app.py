@@ -1,36 +1,43 @@
 import streamlit as st
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from pages.Model_Performance_Evaluation import show_evaluation
+from pages.Model\_Performance\_Evaluation import show\_evaluation
 
-# Load and prepare data
-df = pd.read_csv("telecom_data.csv")  # Make sure this path is correct
-X = df.drop("Churn", axis=1)
-y = df["Churn"]
+# After model training and predictions
 
-# Train-test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Model training
-model = RandomForestClassifier()
-model.fit(X_train, y_train)
-
-# Predictions
-y_pred = model.predict(X_test)
-
-# Show evaluation when button is clicked
 if st.button("Evaluate Model"):
-    show_evaluation(y_test, y_pred, "Random Forest")
+show\_evaluation(y\_test, y\_pred, "Random Forest")
 
-# --- UI section below this ---
-st.set_page_config(
-    page_title="Telco Customer Churn Analysis",
-    layout="wide",
-    page_icon="🔍"
+st.set\_page\_config(
+page\_title="Telco Customer Churn Analysis",
+layout="wide",
+page\_icon="🔍"
 )
 
 st.title("🌟Welcome to Telco Customer Churn Analysis🌟")
 st.write("Use the sidebar to navigate between pages.")
 
-# ... (your intro and description content continues here)
+st.header("Background on Customer Churn in Telecom 📝")
+st.write("""
+Customer churn, also known as customer attrition, refers to the phenomenon where customers stop using a company’s services or products.
+
+In the telecommunications industry, churn is a critical issue, as it directly impacts revenue and growth. Telecom companies often invest heavily in acquiring new customers, but it’s more cost-effective to retain existing ones.
+
+The challenge is identifying which customers are likely to churn before they leave, and taking steps to retain them. Factors such as customer satisfaction, service quality, contract type, and pricing often influence a customer's decision to stay or leave.
+
+This project aims to analyze the factors contributing to churn, predict which customers are at risk of leaving, and provide actionable insights to reduce churn and optimize customer retention strategies.
+""")
+
+st.header("What Can You Explore?🚀")
+st.write("""
+This app allows you to predict **which customers are most likely to churn** based on a variety of features. By using these features, such as contract type, monthly charges, and customer tenure, the model estimates whether a customer will stay with the company or leave.
+
+Here’s how you can interact with the app:
+
+* **Input customer data**: Provide details such as whether the customer has dependents, the type of contract they have, and how long they’ve been with the company.
+* **Get churn prediction**: Based on your input, the app will predict whether the customer is likely to churn (leave) or stay with the company.
+* **Explore predictions based on key features**: Understand how each feature impacts the churn likelihood and how changing certain customer details could influence their risk of churning.
+
+The app uses a machine learning model that has been trained on historical customer data to make these predictions. Use the input form to see the churn prediction for a specific customer, helping you identify high-risk customers and take actions to retain them.
+""")
+
+st.write("---")
+st.write("Made by Ajaykumar") 
