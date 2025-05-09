@@ -1,4 +1,9 @@
 import streamlit as st
+from pages.Model_Performance_Evaluation import show_evaluation
+
+# After model training and predictions
+if st.button("Evaluate Model"):
+    show_evaluation(y_test, y_pred, "Random Forest")
 
 st.set_page_config(
     page_title="Telco Customer Churn Analysis",
